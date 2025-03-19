@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            Dom Manupulation
+        </title>
+        <style>
+            .alert{
+                color: aqua;
+                background: green;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 id="heading">Welcome</h1>
+            <p>Hello</p>
+        </header>
+        <p>Hello world</p>
+        <script>
+            let div = document.createElement ("div");
+            div.id = "paragraph";
+            div.className = 'alert';
+            div.innerHTML = "<p>Congrads you have created a div tag</p>";
+            document.body.append (div);
+            let heading = document.getElementById ("heading");
+            heading.innerHTML = "&#128512";
+            document.querySelector('header p') .innerHTML = "good job"
+        </script>
+    </body>
+</html>
