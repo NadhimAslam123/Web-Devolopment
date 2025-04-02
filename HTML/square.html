@@ -1,0 +1,53 @@
+<hyml>
+    <head>
+        <title>Square</title>
+        <style>
+         h2{
+            text-align: center;
+         }
+         .square{
+            border: 1px solid black;
+            height: 200px;
+            width: 200px;
+            margin: auto;
+         }
+         .buttons{
+            padding: 20px;
+            margin: auto;
+            width: 200px;
+         }
+        </style>
+    </head>
+    <body>
+        <h2>Make changes to the square</h2>
+        <div class = "square"></div>
+        <div class = "button">
+            <button onclick = "changeToCircle()">Make circle</button>
+            <button onclick = "hide()">Hide</button>
+            <button onclick = "show()">Show</button>
+        </div>
+        <script>
+            let div = document.querySelector(".square");
+            function changeToCircle()
+            {
+                div.style.borderRadius = "50%";
+            }
+            function hide()
+            {
+                div.style.display = "none";
+            }
+            function show()
+            {
+                div.style.display = "block";
+            }
+            div.onmouseenter = function ()
+            {
+                div.style.background = "red"
+            }
+            div.onmouseout = function ()
+            {
+                div.style.background = "none"
+            }
+        </script>
+    </body>
+</hyml>
