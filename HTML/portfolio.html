@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Landing page</title>
+        <style>
+            body{
+                text-align: center;
+            }
+            nav{
+                background-color:lightpink;
+                margin:10px;
+            }
+            ul{
+                margin:0px;
+                padding:0px;
+                list-style-type:none;
+                overflow:hidden;
+            }
+            li{
+                float: left;
+            }
+            li a{
+                display:block;
+            }
+            li a:hover{
+                background-color:palevioletred;
+            }
+        </style>
+    </head>,
+    <body>
+      <nav>
+        <ul>
+            <li><a href="https://www.codingal.com/student/dashboard/">Home</a></li>
+            <li><a href="https://www.youtube.com/">About</a></li>
+            <li><a href="https://github.com/">Contact</a></li>
+        </ul>
+      </nav>
+      <h2>Intresting Information</h2>
+      <img src="tiger.jpeg"/>
+       <br />
+       <button onclick="tiger();">Read More!</button>
+       <p id="tiger-info"></p>
+       <img src="lion.jpeg"/>
+       <br />
+       <button onclick="lion();">Read More!</button>
+       <p id="lion-info"></p>
+       <script>
+        function tiger() {
+            document.getElementById("tiger-info").innerHTML="Tigers are powerful hunters with sharp teeth, strong jaws and agile bodies";
+
+        }
+         function lion() {
+                document.getElementById("lion-info").innerHTML = "ion, (Panthera leo), large, powerfully built cat (family Felidae) that is second in size only to the tiger; it is a famous apex predator (meaning without a natural predator or enemy)";
+
+            }
+       </script>
+    </body>
+</html>
