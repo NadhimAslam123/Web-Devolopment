@@ -26,6 +26,54 @@
                 background-color:blueviolet;
                 color:black;
             }
+            .pimg1, .pimg2, .pimg3{
+                opacity: 0.70;
+                background-repeat: no-repeat;
+                background-position:center;
+                background-attachment:fixed;
+                position: relative;
+
+            }
+            .pimg1{
+                background-image:("GT3 RS.jpg");
+             max-height:100%;
+            }
+            .pimg2{
+                background-image: ("aventerdor.jpg");
+                max-height:400px;
+            }
+            .pimg3{
+                background-image:("buggatti.jpg");
+                max-height:400px;
+            }
+            .section{
+                text-align: center;
+                padding:50px 80px:
+            }
+            .section-light{
+                background-color:white;
+                color:black;
+            }
+            .section-dark{
+                background-color:black;
+                color:white;
+            }
+            .ptext{
+                top:50%;
+                width: 100%;
+                text-align:center;
+                position:absolute;
+                font-size:27px;
+                color:black;
+                letter-spacing: 8px;
+            }
+            .ptext .border{
+                background-color:black;
+                color:white;
+            }
+            .ptext .border .trans{
+                background-color:transparent;
+            }
         </style>
     </head>
     <body>
@@ -35,5 +83,42 @@
             <a href="#">Gallery</a>
             <a href="#">Contact_US</a>
         </div>
+       <section>
+    
+        <img class="mySlides" src="bugatti.jpg" style="height: 500px; display: none;">
+    
+        <img class="mySlides" src="aventador.jpg" style="height: 500px; display: none;">
+    
+    </section>
+    
+    <script>
+
+        var myIndex = 0;
+
+        function carousel() {
+
+            var i;
+
+            var x = document.getElementsByClassName("mySlides");
+
+            for (i = 0; i < x.length; i++) {
+
+                x[i].style.display = "none";
+
+            }
+
+            myIndex++;
+
+            if (myIndex > x.length) { myIndex = 1; }
+
+            x[myIndex - 1].style.display = "block";
+
+            setTimeout(carousel, 3000);
+
+        }
+
+        carousel();
+
+    </script>
     </body>
 </html>
