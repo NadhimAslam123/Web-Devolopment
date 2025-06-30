@@ -28,3 +28,31 @@ def display_contact ():
 
         else:
             print("Phonebook is enpty")
+
+def phonebook_menu ():
+    while True:
+        print("\n======Phonebook Menu======")
+        print("1. Add/Update Contact")
+        print("2. Search Contact")
+        print("3. Delete Contact")
+        print("4. Exit")
+
+        Choice = input ("Enter your Choice (1-5):")
+
+        if Choice == '1':
+         name = input ("Enter name:")
+         number = input ("Enter number:")
+         add_contact(name,number) 
+
+        elif Choice == '2':
+            name = input("Enter name to search:")
+            search_contact(name)
+        elif Choice == '3':
+            name = input ("Enter name to delete:")
+            delete_contacts(name)
+        elif Choice == '4':
+            display_contact()
+        elif Choice == '5':
+            print("Exiting phonebook . Godbye!")
+
+phonebook_menu()
